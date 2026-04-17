@@ -154,7 +154,7 @@ for path in files:
     print(f'Updated: {name} ({r.status_code})')
   else:
     r = requests.post(
-      f'{base}/v1/datasets/{did}/document/create_by_text',
+      f'{base}/v1/datasets/{did}/documents/create_by_text',
       headers=hdrs,
       json={'name': name, 'text': content,
             'indexing_technique': 'high_quality',
