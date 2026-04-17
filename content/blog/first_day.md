@@ -10,3 +10,5 @@ I really liked the first day of ai that our teachers wanted us to implement a po
 What i like about it is that u can easily share with others now the process and the end product.
 
 Looking forward to see where my portfolio goes.
+
+It was frustrating ai
