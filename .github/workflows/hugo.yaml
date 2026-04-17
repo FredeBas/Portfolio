@@ -122,46 +122,43 @@ jobs:
           DIFY_DATASET_ID: ${{ secrets.DIFY_DATASET_ID }}
           DIFY_BASE_URL: ${{ secrets.DIFY_BASE_URL }}
         run: |
-          python3 - <<'EOF'
-import os, requests
-
-base = os.environ['DIFY_BASE_URL']
-key  = os.environ['DIFY_API_KEY']
-did  = os.environ['DIFY_DATASET_ID']
-hdrs = {'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'}
-
-files = [f for f in os.environ.get('FILES', '').split() if f]
-
-docs = requests.get(
-  f'{base}/v1/datasets/{did}/documents',
-  headers=hdrs, params={'limit': 100}
-).json().get('data', [])
-
-for path in files:
-  if not os.path.exists(path):
-    print(f'Skipping (not found): {path}')
-    continue
-  name = os.path.basename(path)
-  content = open(path).read()
-  existing = next((d for d in docs if d['name'] == name), None)
-  if existing:
-    r = requests.post(
-      f'{base}/v1/datasets/{did}/documents/{existing["id"]}/update_by_text',
-      headers=hdrs,
-      json={'name': name, 'text': content,
-            'process_rule': {'mode': 'automatic'}}
-    )
-    print(f'Updated: {name} ({r.status_code})')
-  else:
-    r = requests.post(
-      f'{base}/v1/datasets/{did}/documents/create_by_text',
-      headers=hdrs,
-      json={'name': name, 'text': content,
-            'indexing_technique': 'high_quality',
-            'process_rule': {'mode': 'automatic'}}
-    )
-    print(f'Created: {name} ({r.status_code})')
-EOF
+          python3 << 'EOF'
+          import os, requests
+          
+          base = os.environ['DIFY_BASE_URL']
+          key  = os.environ['DIFY_API_KEY']
+          did  = os.environ['DIFY_DATASET_ID']
+          hdrs = {'Authorization': f'Bearer {key}', 'Content-Type': 'application/json'}
+          
+          files = [f for f in os.environ.get('FILES', '').split() if f]
+          
+          docs = requests.get(
+            f'{base}/v1/datasets/{did}/documents',
+            headers=hdrs, params={'limit': 100}
+          ).json().get('data', [])
+          
+          for path in files:
+            if not os.path.exists(path):
+              print(f'Skipping (not found): {path}')
+              continue
+            name = os.path.basename(path)
+            content = open(path).read()
+            existing = next((d for d in docs if d['name'] == name), None)
+            if existing:
+              r = requests.post(
+                f'{base}/v1/datasets/{did}/documents/{existing["id"]}/update_by_text',
+                headers=hdrs,
+                json={'name': name, 'text': content, 'process_rule': {'mode': 'automatic'}}
+              )
+              print(f'Updated: {name} ({r.status_code})')
+            else:
+              r = requests.post(
+                f'{base}/v1/datasets/{did}/documents/create_by_text',
+                headers=hdrs,
+                json={'name': name, 'text': content, 'indexing_technique': 'high_quality', 'process_rule': {'mode': 'automatic'}}
+              )
+              print(f'Created: {name} ({r.status_code})')
+          EOF
         env:
           FILES: ${{ steps.changed.outputs.files }}
 
