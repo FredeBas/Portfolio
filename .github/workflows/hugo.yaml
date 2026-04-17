@@ -121,6 +121,7 @@ jobs:
           DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
           DIFY_DATASET_ID: ${{ secrets.DIFY_DATASET_ID }}
           DIFY_BASE_URL: ${{ secrets.DIFY_BASE_URL }}
+          FILES: ${{ steps.changed.outputs.files }}
         run: |
           python3 << 'EOF'
           import os, requests
@@ -159,8 +160,6 @@ jobs:
               )
               print(f'Created: {name} ({r.status_code})')
           EOF
-        env:
-          FILES: ${{ steps.changed.outputs.files }}
 
   deploy:
     environment:
