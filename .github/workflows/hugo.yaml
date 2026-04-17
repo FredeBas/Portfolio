@@ -107,8 +107,8 @@ jobs:
       - name: Find changed markdown files
         id: changed
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            FILES=$(find . -name "*.md" -not -path "./.github/*" | tr '\n' ' ')
+          if [ '${{ github.event_name }}' = 'workflow_dispatch' ]; then
+            FILES=$(find . -name '*.md' -not -path './.github/*' | tr '\n' ' ')
           else
             FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | tr '\n' ' ')
           fi
