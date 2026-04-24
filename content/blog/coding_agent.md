@@ -1,7 +1,8 @@
-What happens when you combine a meditation course, an AI assistant and some vibe coding energy? You're about to find out.
- 
-In this blog post I'm sharing the full journey behind my latest project - an interactive meditation quiz built with React, deployed via GitHub Actions to GitHub Pages, and **vibe coded from start to finish with Claude AI**.
- 
+---
+title: Building a meditation app with react and an Ai-agent
+date: 2026-04-24
+---
+
 ---
  
 ## 🤖 What is Vibe Coding?
