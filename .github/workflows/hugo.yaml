@@ -129,7 +129,7 @@ jobs:
               --request POST \
               --url "${DIFY_BASE_URL}/v1/datasets/${DIFY_DATASET_ID}/document/create-by-file" \
               --header "Authorization: Bearer ${DIFY_API_KEY}" \
-              --form "file=@${file};filename=${doc_name}.md" \
+              --form "file=@${file};filename=${doc_name}.md type=text/plain;charset=utf-8" " \
               --form 'data={"indexing_technique":"high_quality","doc_form":"text_model","process_rule":{"mode":"automatic"}}'
           done
       - name: Cache restore
