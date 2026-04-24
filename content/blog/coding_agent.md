@@ -7,17 +7,6 @@ Hvad sker der når man kombinerer et kursus om meditation, en AI-assistent og li
  
 I dette blog indlæg deler jeg hele rejsen bag mit seneste projekt - en interaktiv meditation quiz bygget med React, deployed via GitHub Actions til GitHub Pages, og **vibe coded fra start til slut med Claude AI**.
  
----
- 
-## 💡 Idéen
- 
-Det hele startede med et kursus i meditation. Kurset indeholdt en masse spørgsmål om hvad meditation egentlig er - og hvad det IKKE er. Mange af os tror at meditation handler om at tømme hovedet for tanker, sidde i lotusstilling og opnå fuldstændig indre fred på 5 minutter.
- 
-Spoiler: det gør det ikke.
- 
-Jeg sad med en bunke quiz-ark fra kurset og tænkte: *"Det her burde være en hjemmeside."* Og så gik jeg i gang.
- 
----
  
 ## 🤖 Hvad er Vibe Coding?
  
