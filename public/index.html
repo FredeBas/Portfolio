@@ -3,8 +3,8 @@
   lang="en"
   dir="ltr"
   class="scroll-smooth"
-  data-default-appearance="light"
-  data-auto-appearance="true"><head>
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head>
 	<meta name="generator" content="Hugo 0.160.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
@@ -16,8 +16,8 @@
 
   
   
-    <title>Portfolie</title>
-    <meta name="title" content="Portfolie">
+    <title>Portfolio</title>
+    <meta name="title" content="Portfolio">
   
 
   
@@ -28,10 +28,10 @@
   <link rel="canonical" href="http://localhost:1313/">
   
     
-      <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Portfolie" />
+      <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Portfolio" />
   
     
-      <link rel="alternate" type="application/json" href="/index.json" title="Portfolie" />
+      <link rel="alternate" type="application/json" href="/index.json" title="Portfolio" />
   
 
   
@@ -50,14 +50,14 @@
 
   
   <meta property="og:url" content="http://localhost:1313/">
-  <meta property="og:site_name" content="Portfolie">
-  <meta property="og:title" content="Portfolie">
+  <meta property="og:site_name" content="Portfolio">
+  <meta property="og:title" content="Portfolio">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Portfolie">
+  <meta name="twitter:title" content="Portfolio">
 
   
   
@@ -94,6 +94,8 @@
   
   
   
+  
+    
   
   
     
@@ -102,8 +104,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.dc8fe411dbbe7939b35fad848218bcb8e0a84ed68becff9a3964e78318b639245b2cd72cd7dc316ad515d8cbf09ad89baf3e965a447db6824deb995f9d955fb2.css"
-    integrity="sha512-3I/kEdu&#43;eTmzX62Eghi8uOCoTtaL7P&#43;aOWTngxi2OSRbLNcs19wxatUV2Mvwmtibrz6WWkR9toJN65lfnZVfsg==">
+    href="/css/main.bundle.min.53bfea1a198a5440957c3e38b76264dc300d9f088d9cb10cd385317ec03da0dbc488b805e7ad976a27d8ba02ca6f8f7ca44b675bbb0b9452505c2cb36882ad5a.css"
+    integrity="sha512-U7/qGhmKVECVfD44t2Jk3DANnwiNnLEM04UxfsA9oNvEiLgF562XaifYugLKb498pEtnW7sLlFJQXCyzaIKtWg==">
 
   
   
@@ -208,7 +210,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "http://localhost:1313/",
-    "name": "Portfolie",
+    "name": "Portfolio",
     
     "inLanguage": "en-us",
     "url": "http://localhost:1313/",
@@ -254,7 +256,11 @@
 
   
   <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
-    <div id="the-top" class="absolute flex self-center">
+
+    
+    <canvas id="matrix-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.18;"></canvas>
+
+    <div id="the-top" class="absolute flex self-center" style="position:relative;z-index:10;">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content">
@@ -262,13 +268,15 @@
         Skip to main content
       </a>
     </div>
-    
-    
-      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+
+    <div style="position:relative;z-index:10;flex:1;display:flex;flex-direction:column;">
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
   
   
     <a href="/" class="text-base font-medium truncate min-w-0 shrink">
-      Portfolie
+      Portfolio
     </a>
   
   <div class="flex items-center ms-auto">
@@ -445,10 +453,10 @@
       
         <a
           href=""
-          aria-label="An interesting topic"
+          
           class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
           
-          <span title="">An interesting topic</span>
+          <span title=""></span>
         </a>
       
     </div>
@@ -483,7 +491,7 @@
           class="flex items-center bf-icon-color-hover">
           
           <span class="text-xs font-light" title="">
-            An interesting topic
+            
           </span>
         </a>
       
@@ -493,10 +501,10 @@
 
 
 
-    
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
-        
+      
+      <div class="relative flex flex-col grow">
+        <main id="main-content" class="grow">
+          
   
   
     
@@ -553,131 +561,6 @@
 
 
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  
-    
-
-
-
-
-
-
-  
-  
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article
-  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  
-  <div class="p-4">
-    <header>
-      <a
-        
-          href="/blog/coding_agent/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag
-          
-        </h2>
-      </a>
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-04-24T00:00:00&#43;00:00">24 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>964 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-
-  
-  
-
-
-
-    </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
   
     
 
@@ -929,6 +812,131 @@
 </article>
 
   
+    
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article
+  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  
+  <div class="p-4">
+    <header>
+      <a
+        
+          href="/blog/coding_agent/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>1038 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+    </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+  
 </section>
 
   
@@ -951,8 +959,58 @@
 </section>
 
   
+  <div style="
+  background: #0a0f14;
+  border: 0.5px solid rgba(0,255,65,0.2);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  font-family: monospace;
+  margin: 1.5rem 0;
+  position: relative;
+  z-index: 10;
+">
+  
+  <div style="display:flex;gap:6px;margin-bottom:12px;">
+    <span style="width:10px;height:10px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+    <span style="width:10px;height:10px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+    <span style="width:10px;height:10px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+  </div>
 
-        
+  <p style="margin:0 0 4px;font-size:12px;color:#4a5568;">
+    <span style="color:#00ff41;">root@portfolio:~$</span>
+    <span style="color:#a0aec0;"> whoami</span>
+  </p>
+  <p style="margin:0 0 12px;font-size:12px;color:#2d6a4f;padding-left:14px;">
+    Frederik — Computer Science Student
+  </p>
+
+  <p style="margin:0 0 4px;font-size:12px;color:#4a5568;">
+    <span style="color:#00ff41;">root@portfolio:~$</span>
+    <span style="color:#a0aec0;"> ls ./projects</span>
+  </p>
+  <p style="margin:0 0 12px;font-size:12px;color:#2d6a4f;padding-left:14px;">
+    peli/&nbsp;&nbsp; meditation-quiz/&nbsp;&nbsp; rag-chatbot/
+  </p>
+
+  <p style="margin:0 0 4px;font-size:12px;color:#4a5568;">
+    <span style="color:#00ff41;">root@portfolio:~$</span>
+    <span style="color:#a0aec0;"> cat interests.txt</span>
+  </p>
+  <p style="margin:0 0 12px;font-size:12px;color:#2d6a4f;padding-left:14px;">
+    AI/ML · Web Development · Linux · Backend · Frontend · Rest-Api
+  </p>
+
+  <p style="margin:0;font-size:12px;color:#4a5568;">
+    <span style="color:#00ff41;">root@portfolio:~$</span>
+    <span id="terminal-cursor" style="display:inline-block;width:7px;height:13px;background:#00ff41;vertical-align:middle;margin-left:4px;animation:blink 1s step-end infinite;"></span>
+  </p>
+</div>
+
+<style>
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+</style>
+
+          
 
 
   
@@ -974,7 +1032,7 @@
   </a>
 </div>
 
-      </main><footer id="site-footer" class="py-10 print:hidden">
+        </main><footer id="site-footer" class="py-10 print:hidden">
   
   
     
@@ -1048,24 +1106,53 @@
   </div>
 </div>
 
+      </div>
     </div>
+
+    
+    <script>
+      (function() {
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        const chars = '01アイウエオカキクケコサシスセタチツテトナニヌネノ{}[]<>|/\\*&#@!';
+        let drops = [];
+        const fontSize = 13;
+
+        function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          const cols = Math.floor(canvas.width / fontSize);
+          drops = Array.from({ length: cols }, () => Math.random() * -100);
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(6, 10, 15, 0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#00ff41';
+          ctx.font = fontSize + 'px monospace';
+          for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillStyle = Math.random() > 0.95 ? '#ffffff' : '#00ff41';
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+            drops[i]++;
+          }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 50);
+      })();
+    </script>
+
     <script>
      window.difyChatbotConfig = {
       token: 'LCEv1QhQeLDNlf3h',
-      inputs: {
-        
-        
-        
-        
-      },
-      systemVariables: {
-        
-        
-      },
-      userVariables: {
-        
-        
-      },
+      inputs: {},
+      systemVariables: {},
+      userVariables: {},
      }
     </script>
     <script

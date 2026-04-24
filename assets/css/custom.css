@@ -1,0 +1,161 @@
+
+
+/* ---------- Farver & baggrund ---------- */
+:root {
+  --cyber-green: #00ff41;
+  --cyber-green-dim: rgba(0, 255, 65, 0.15);
+  --cyber-green-border: rgba(0, 255, 65, 0.2);
+  --cyber-bg: #060a0f;
+  --cyber-surface: #0a0f14;
+  --cyber-text: #a0aec0;
+}
+
+body {
+  background-color: var(--cyber-bg) !important;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: rgba(6, 10, 15, 0.85) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid var(--cyber-green-border) !important;
+}
+
+header a, nav a {
+  font-family: var(--font-mono) !important;
+  color: var(--cyber-text) !important;
+  letter-spacing: 1px;
+  font-size: 0.85rem !important;
+}
+
+header a:hover, nav a:hover {
+  color: var(--cyber-green) !important;
+}
+
+/* ---------- Profilsektion ---------- */
+.profile {
+  font-family: var(--font-mono) !important;
+}
+
+.profile h1 {
+  color: #e6edf3 !important;
+  letter-spacing: 1px;
+}
+
+.profile p {
+  color: var(--cyber-text) !important;
+}
+
+/* Grøn ring rundt om profilbillede */
+.profile img {
+  border: 2px solid var(--cyber-green) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.15);
+}
+
+/* ---------- Artikel-kort ---------- */
+article.card, .article-grid article {
+  background-color: var(--cyber-surface) !important;
+  border: 0.5px solid var(--cyber-green-border) !important;
+  border-radius: 8px !important;
+  font-family: var(--font-mono) !important;
+  transition: border-color 0.2s ease;
+}
+
+article.card:hover, .article-grid article:hover {
+  border-color: rgba(0, 255, 65, 0.5) !important;
+  background-color: #0d1520 !important;
+}
+
+article.card h2, article.card h3 {
+  color: #e6edf3 !important;
+  font-size: 0.9rem !important;
+}
+
+article.card time,
+article.card .text-sm,
+article.card .text-xs {
+  color: #2d3748 !important;
+  font-size: 0.75rem !important;
+}
+
+/* ---------- "Recent" overskrift ---------- */
+h2.recent-heading, section h2 {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 3px !important;
+  color: var(--cyber-green) !important;
+  text-transform: uppercase;
+}
+
+/* ---------- "Show More" knap ---------- */
+a[href*="projects"] button,
+.btn, button {
+  font-family: var(--font-mono) !important;
+  background: transparent !important;
+  border: 0.5px solid var(--cyber-green-border) !important;
+  color: var(--cyber-text) !important;
+  letter-spacing: 1px !important;
+  border-radius: 4px !important;
+}
+
+a[href*="projects"] button:hover,
+.btn:hover, button:hover {
+  border-color: var(--cyber-green) !important;
+  color: var(--cyber-green) !important;
+}
+
+/* ---------- Matrix baggrunds-animation ---------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--cyber-green) !important;
+}
+
+a:hover {
+  color: #00ff41cc !important;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--cyber-bg) !important;
+  border-top: 0.5px solid var(--cyber-green-border) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  color: #2d3748 !important;
+}
+
+/* ---------- Artikelside ---------- */
+.prose {
+  font-family: var(--font-mono) !important;
+  color: var(--cyber-text) !important;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  color: #e6edf3 !important;
+  font-family: var(--font-mono) !important;
+}
+
+.prose code {
+  background: var(--cyber-surface) !important;
+  color: var(--cyber-green) !important;
+  border: 0.5px solid var(--cyber-green-border) !important;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.prose pre {
+  background: var(--cyber-surface) !important;
+  border: 0.5px solid var(--cyber-green-border) !important;
+}

@@ -1,101 +1,103 @@
+What happens when you combine a meditation course, an AI assistant and some vibe coding energy? You're about to find out.
+ 
+In this blog post I'm sharing the full journey behind my latest project - an interactive meditation quiz built with React, deployed via GitHub Actions to GitHub Pages, and **vibe coded from start to finish with Claude AI**.
+ 
 ---
-title: Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag
-date: 2026-04-24
+ 
+## 🤖 What is Vibe Coding?
+ 
+Vibe coding is a development method where you describe what you want to an AI, and the AI writes the code. You are the architect and director - the AI is the developer. You don't necessarily need to know all the technical details. You just need to know what you want and communicate it clearly.
+ 
+In this case I used **Claude** from Anthropic as my AI partner. The entire project - from the first line of code to deployment - was built in a single conversation with Claude.
+ 
+---
+ 
+## 📋 Workflow - From Idea to Live Website
+ 
+### Step 1: Photos of the Quiz Sheets
+I photographed my quiz sheets from the meditation course and uploaded them to Claude. Claude read the questions, identified the correct answers and understood the structure straight away.
+ 
+### Step 2: First Version
+Claude built a first version of the quiz as a simple HTML page. It worked locally but had issues loading files correctly via Live Server in VS Code.
+ 
+### Step 3: Migrating to React + Vite
+We decided to build it properly with React and Vite - a modern JavaScript framework and build tool. Claude generated all the necessary files and set up the project from scratch.
+ 
+### Step 4: Features
+- 21 questions across 5 categories
+- Instant feedback with jokes for each answer
+- Live score tracking and progress bar
+- Animations and modern UI with gradient design
+- Results page with personalised feedback
+### Step 5: Deployment with GitHub Actions
+We set up GitHub Actions to automatically build and deploy the project to GitHub Pages every time new code is pushed to GitHub. That means I never have to think about deployment - it happens completely automatically.
+ 
+### Step 6: Live! 🎉
+After all the fixes the quiz was live on GitHub Pages - hosted for free and accessible to everyone.
+ 
+---
+ 
+## 🔧 Things That Needed Fixing
+ 
+No project goes completely smoothly - and this one was no exception. Here are the problems we ran into along the way:
+ 
+**The white page** was the biggest challenge. After deployment the page showed nothing - just white. It turned out to be three separate problems that all needed fixing.
+ 
+First, the deployment file was in the wrong place. It needed to be in a specific folder for GitHub Actions to find it - something we had overlooked from the start.
+ 
+Then there was a problem with the base path in the configuration. GitHub Pages requires you to specify exactly which path the website lives at - and it has to match the repo name on GitHub exactly, including uppercase and lowercase letters.
+ 
+Finally there was a problem with how the CSS framework Tailwind was being loaded. We used a quick CDN solution that works locally but not in a proper production build. We had to install Tailwind correctly as part of the project instead.
+ 
+**Permissions errors** in GitHub Actions meant the bot didn't have the rights to write to our repo. This was fixed by enabling "Read and write permissions" in the GitHub settings.
+ 
+All in all these were good learning points - and the kind of mistakes you only make once. 😄
+ 
+---
+ 
+## 😄 My Favourite Feature: Jokes With Every Answer
+ 
+The most fun part of the project is the feedback system. For every question you get a joke explaining why your answer is right or wrong. For example:
+ 
+> **Question:** The goal of meditation is to be completely empty of thoughts
+>
+> **Wrong answer:** *"Nope! Our brains are like thinking machines - that's their job. The task is to be still around the thoughts, not to make them disappear. 🧠"*
+ 
+> **Question:** You can only meditate properly if you sit in the lotus position
+>
+> **Wrong answer:** *"Oh no! You can be inwardly still anywhere - even while doing the dishes! (Although that would make for an unusually peaceful kitchen) 🧖‍♀️"*
+ 
+---
+ 
+## 🎓 What I Learned
+ 
+**About meditation:** It's not about removing thoughts. It's about changing your relationship to them. You can have a whole festival of thoughts in your head and still be completely still - because stillness is an inner position, not an outer state.
+ 
+**About vibe coding:** AI is a fantastic tool, but it's not magic. You still need to understand what you want, communicate clearly and debug when things go wrong. The white page taught me more about deployment than hours of tutorials ever would have.
+ 
+**About building projects:** The idea is the hardest part. Once you have it, the path from idea to finished product is shorter than ever thanks to AI.
+ 
+---
+## ❌ Ai mistakes
+
+Ai is not perfect and as you can see in this project it's not the perfect danish language it is translated to.
+Perhaps it could be my prompts that could have made it better.
+It's important to see that you can't 100% trust ai but its still a powerful tool to code with but you gotta have some thoughts about what you prompt it with.
+I startet this project with 2 lines of prompt to see what would happen. It was awful.. it looked like someone playing with html for the first time, but after a more narrow prompt with much more details about what you want it gives you alot more.
 
 ---
-Hvad sker der når man kombinerer et kursus om meditation, en AI-assistent og lidt vibe coding-energi? Det finder du ud af her.
  
-I dette blog indlæg deler jeg hele rejsen bag mit seneste projekt - en interaktiv meditation quiz bygget med React, deployed via GitHub Actions til GitHub Pages, og **vibe coded fra start til slut med Claude AI**.
+## 🚀 Try It Yourself
  
- 
-## 🤖 Hvad er Vibe Coding?
- 
-Vibe coding er en udviklingsmetode hvor du beskriver hvad du vil have til en AI, og AI'en skriver koden. Du er arkitekten og direktøren - AI'en er udvikleren. Du behøver ikke nødvendigvis at kende alle tekniske detaljer. Du skal bare vide hvad du vil have, og kommunikere det tydeligt.
- 
-I dette tilfælde brugte jeg **Claude** fra Anthropic som min AI-partner. Hele projektet - fra første linje kode til deployment - blev bygget i en enkelt samtale med Claude.
- 
----
- 
-## 📋 Workflow - Fra Idé til Live Hjemmeside
- 
-### Trin 1: Billeder af Quiz-arkene
-Jeg fotograferede mine quiz-ark fra meditationskurset og uploadede dem til Claude. Claude læste spørgsmålene, identificerede de rigtige svar og forstod strukturen med det samme.
- 
-### Trin 2: Første Version
-Claude lavede en første version af quizzen som en simpel HTML side. Den virkede lokalt, men havde problemer med at loade filer korrekt via Live Server i VS Code.
- 
-### Trin 3: Migrering til React + Vite
-Vi besluttede at bygge det ordentligt med React og Vite - et moderne JavaScript framework og build tool. Claude genererede alle de nødvendige filer og satte projektet op fra bunden.
- 
-### Trin 4: Features
-- 21 spørgsmål fordelt på 5 kategorier
-- Øjeblikkelig feedback med jokes ved hvert svar
-- Live score tracking og progress bar
-- Animationer og moderne UI med gradient design
-- Resultat side med personlig feedback
-### Trin 5: Deployment med GitHub Actions
-Vi satte GitHub Actions op til at bygge og deploye projektet automatisk til GitHub Pages hver gang der pushes ny kode til GitHub. Det betyder at jeg aldrig selv behøver at tænke på deployment - det sker helt automatisk.
- 
-### Trin 6: Live! 🎉
-Efter alle fixes var quizzen live på GitHub Pages - gratis hostet og tilgængelig for alle.
- 
----
- 
-## 🔧 Ting Der Skulle Fixes
- 
-Ingen projekter går helt gnidningsfrit - og det gjorde dette heller ikke. Her er de problemer vi stødte på undervejs:
- 
-**Den hvide side** var den største udfordring. Efter deployment viste siden ingenting - bare hvid. Det viste sig at være tre separate problemer der alle skulle fixes:
- 
-Først lå deployment-filen det forkerte sted. Den skulle ligge i en specifik mappe for at GitHub Actions kunne finde den - det havde vi overset fra starten.
- 
-Derefter var der et problem med base-stien i konfigurationen. GitHub Pages kræver at man specificerer præcis hvilken sti hjemmesiden ligger på - og det skal matche repo-navnet på GitHub helt nøjagtigt, inklusiv store og små bogstaver.
- 
-Til sidst var der et problem med hvordan CSS-frameworket Tailwind blev loadet. Vi brugte en hurtig CDN-løsning som virker lokalt, men ikke i et rigtigt production build. Vi måtte installere Tailwind korrekt som en del af projektet i stedet.
- 
-**Permissions-fejl** i GitHub Actions betød at robotten ikke havde rettigheder til at skrive til vores repo. Det blev løst ved at slå "Read and write permissions" til i GitHub indstillingerne.
- 
-Alt i alt var det gode læringspunkter - og den slags fejl man kun laver én gang. 😄
- 
----
- 
-## 😄 Min Yndlings Feature: Jokes ved Hvert Svar
- 
-Det sjoveste ved projektet er feedback-systemet. For hvert spørgsmål får du en joke der forklarer hvorfor dit svar er rigtigt eller forkert. For eksempel:
- 
-> **Spørgsmål:** Målet med meditation er at være helt tom for tanker
->
-> **Forkert svar:** *"Næh! Vores hjerner er som tænkemaskiner - det er deres job at tænke. Opgaven er at være stille omkring tankerne, ikke at få dem til at forsvinde. 🧠"*
- 
-> **Spørgsmål:** Man kan kun meditere rigtigt hvis man sidder i lotusstilling
->
-> **Forkert svar:** *"Ah nej! Du kan være indvendigt stille overalt - selv mens du gør opvask! (Selvom det ville være ualmindeligt roligt derhjemme) 🧖‍♀️"*
- 
----
- 
-## 🎓 Hvad Jeg Lærte
- 
-**Om meditation:** Det handler ikke om at fjerne tanker. Det handler om at ændre din relation til dem. Du kan have en hel festival af tanker i hovedet og stadig være fuldkommen stille - fordi stilhed er en indre position, ikke en ydre tilstand.
- 
-**Om vibe coding:** AI er et fantastisk værktøj, men det er ikke magisk. Du skal stadig forstå hvad du vil have, kommunikere tydeligt og debugge når ting går galt. Den hvide side lærte mig mere om deployment end mange timers tutorial nogensinde ville have gjort.
- 
-**Om at bygge projekter:** Idéen er det sværeste. Når du har den, er vejen fra idé til færdigt produkt kortere end nogensinde takket være AI.
- 
----
- 
-## 🚀 Prøv Det Selv
- 
-Quizzen er live og gratis at bruge:
+The quiz is live and free to use:
 👉 **[https://fredebas.github.io/Meditation-Quiz/](https://fredebas.github.io/Meditation-Quiz/)**
  
- 
 ---
  
-## En Tak til Claude 🤖
+## A Thank You to Claude 🤖
  
-Dette projekt ville ikke eksistere uden Claude. Ikke fordi jeg ikke kan kode - men fordi vibe coding med AI gør det muligt at gå fra idé til færdigt produkt på en brøkdel af den tid det normalt ville tage.
+This project wouldn't exist without Claude. Not because I can't code - but because vibe coding with AI makes it possible to go from idea to finished product in a fraction of the time it would normally take.
  
-Det handler ikke om at AI erstatter udviklere. Det handler om at AI giver dig superkræfter til at bygge ting hurtigere, lære undervejs og fokusere på idéen frem for syntaksen.
+It's not about AI replacing developers. It's about AI giving you superpowers to build things faster, learn along the way and focus on the idea rather than the syntax.
  
-> *"Vibe coding er ikke fremtiden - det er nutiden."*
- 
+> *"Vibe coding isn't the future - it's the present."*

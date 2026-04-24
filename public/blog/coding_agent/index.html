@@ -3,8 +3,8 @@
   lang="en"
   dir="ltr"
   class="scroll-smooth"
-  data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en-us">
@@ -15,8 +15,8 @@
 
   
   
-    <title>Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag &middot; Portfolie</title>
-    <meta name="title" content="Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag &middot; Portfolie">
+    <title> &middot; Portfolio</title>
+    <meta name="title" content=" &middot; Portfolio">
   
 
   
@@ -43,17 +43,15 @@
 
   
   <meta property="og:url" content="http://localhost:1313/blog/coding_agent/">
-  <meta property="og:site_name" content="Portfolie">
-  <meta property="og:title" content="Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag">
+  <meta property="og:site_name" content="Portfolio">
+  <meta property="og:title" content="Portfolio">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2026-04-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-04-24T00:00:00+00:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag">
+  <meta name="twitter:title" content="Portfolio">
 
   
   
@@ -90,6 +88,8 @@
   
   
   
+  
+    
   
   
     
@@ -98,8 +98,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.dc8fe411dbbe7939b35fad848218bcb8e0a84ed68becff9a3964e78318b639245b2cd72cd7dc316ad515d8cbf09ad89baf3e965a447db6824deb995f9d955fb2.css"
-    integrity="sha512-3I/kEdu&#43;eTmzX62Eghi8uOCoTtaL7P&#43;aOWTngxi2OSRbLNcs19wxatUV2Mvwmtibrz6WWkR9toJN65lfnZVfsg==">
+    href="/css/main.bundle.min.53bfea1a198a5440957c3e38b76264dc300d9f088d9cb10cd385317ec03da0dbc488b805e7ad976a27d8ba02ca6f8f7ca44b675bbb0b9452505c2cb36882ad5a.css"
+    integrity="sha512-U7/qGhmKVECVfD44t2Jk3DANnwiNnLEM04UxfsA9oNvEiLgF562XaifYugLKb498pEtnW7sLlFJQXCyzaIKtWg==">
 
   
   
@@ -204,8 +204,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blogs",
-    "name": "Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag",
-    "headline": "Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag",
+    "name": "",
+    "headline": "",
     
     "inLanguage": "en-us",
     "url" : "http://localhost:1313/blog/coding_agent/",
@@ -213,16 +213,16 @@
       "@type": "Person",
       "name": "Frederik Bastiansen"
     },
-    "copyrightYear": "2026",
-    "dateCreated": "2026-04-24T00:00:00\u002b00:00",
-    "datePublished": "2026-04-24T00:00:00\u002b00:00",
     
-    "dateModified": "2026-04-24T00:00:00\u002b00:00",
+    
+    
+    
+    
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "964"
+    "wordCount": "1038"
   }]
   </script>
 
@@ -260,7 +260,11 @@
 
   
   <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
-    <div id="the-top" class="absolute flex self-center">
+
+    
+    <canvas id="matrix-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.18;"></canvas>
+
+    <div id="the-top" class="absolute flex self-center" style="position:relative;z-index:10;">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content">
@@ -268,13 +272,15 @@
         Skip to main content
       </a>
     </div>
-    
-    
-      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+
+    <div style="position:relative;z-index:10;flex:1;display:flex;flex-direction:column;">
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
   
   
     <a href="/" class="text-base font-medium truncate min-w-0 shrink">
-      Portfolie
+      Portfolio
     </a>
   
   <div class="flex items-center ms-auto">
@@ -451,10 +457,10 @@
       
         <a
           href=""
-          aria-label="An interesting topic"
+          
           class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
           
-          <span title="">An interesting topic</span>
+          <span title=""></span>
         </a>
       
     </div>
@@ -489,7 +495,7 @@
           class="flex items-center bf-icon-color-hover">
           
           <span class="text-xs font-light" title="">
-            An interesting topic
+            
           </span>
         </a>
       
@@ -499,10 +505,10 @@
 
 
 
-    
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
-        
+      
+      <div class="relative flex flex-col grow">
+        <main id="main-content" class="grow">
+          
   
   <article>
     
@@ -512,7 +518,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Sådan byggede jeg en interaktiv Meditation Quiz med React og AI på én dag
+        
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -564,7 +570,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-24T00:00:00&#43;00:00">24 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>964 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>1038 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -658,193 +664,194 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>Hvad sker der når man kombinerer et kursus om meditation, en AI-assistent og lidt vibe coding-energi? Det finder du ud af her.</p>
-<p>I dette blog indlæg deler jeg hele rejsen bag mit seneste projekt - en interaktiv meditation quiz bygget med React, deployed via GitHub Actions til GitHub Pages, og <strong>vibe coded fra start til slut med Claude AI</strong>.</p>
+          <p>What happens when you combine a meditation course, an AI assistant and some vibe coding energy? You&rsquo;re about to find out.</p>
+<p>In this blog post I&rsquo;m sharing the full journey behind my latest project - an interactive meditation quiz built with React, deployed via GitHub Actions to GitHub Pages, and <strong>vibe coded from start to finish with Claude AI</strong>.</p>
 <hr>
 
-<h2 class="relative group">💡 Idéen
-    <div id="-idéen" class="anchor"></div>
+<h2 class="relative group">🤖 What is Vibe Coding?
+    <div id="-what-is-vibe-coding" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-id%c3%a9en" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-what-is-vibe-coding" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Det hele startede med et kursus i meditation. Kurset indeholdt en masse spørgsmål om hvad meditation egentlig er - og hvad det IKKE er. Mange af os tror at meditation handler om at tømme hovedet for tanker, sidde i lotusstilling og opnå fuldstændig indre fred på 5 minutter.</p>
-<p>Spoiler: det gør det ikke.</p>
-<p>Jeg sad med en bunke quiz-ark fra kurset og tænkte: <em>&ldquo;Det her burde være en hjemmeside.&rdquo;</em> Og så gik jeg i gang.</p>
+<p>Vibe coding is a development method where you describe what you want to an AI, and the AI writes the code. You are the architect and director - the AI is the developer. You don&rsquo;t necessarily need to know all the technical details. You just need to know what you want and communicate it clearly.</p>
+<p>In this case I used <strong>Claude</strong> from Anthropic as my AI partner. The entire project - from the first line of code to deployment - was built in a single conversation with Claude.</p>
 <hr>
 
-<h2 class="relative group">🤖 Hvad er Vibe Coding?
-    <div id="-hvad-er-vibe-coding" class="anchor"></div>
+<h2 class="relative group">📋 Workflow - From Idea to Live Website
+    <div id="-workflow---from-idea-to-live-website" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-hvad-er-vibe-coding" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>Vibe coding er en udviklingsmetode hvor du beskriver hvad du vil have til en AI, og AI&rsquo;en skriver koden. Du er arkitekten og direktøren - AI&rsquo;en er udvikleren. Du behøver ikke nødvendigvis at kende alle tekniske detaljer. Du skal bare vide hvad du vil have, og kommunikere det tydeligt.</p>
-<p>I dette tilfælde brugte jeg <strong>Claude</strong> fra Anthropic som min AI-partner. Hele projektet - fra første linje kode til deployment - blev bygget i en enkelt samtale med Claude.</p>
-<hr>
-
-<h2 class="relative group">📋 Workflow - Fra Idé til Live Hjemmeside
-    <div id="-workflow---fra-idé-til-live-hjemmeside" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-workflow---fra-id%c3%a9-til-live-hjemmeside" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-workflow---from-idea-to-live-website" aria-label="Anchor">#</a>
     </span>
     
 </h2>
 
-<h3 class="relative group">Trin 1: Billeder af Quiz-arkene
-    <div id="trin-1-billeder-af-quiz-arkene" class="anchor"></div>
+<h3 class="relative group">Step 1: Photos of the Quiz Sheets
+    <div id="step-1-photos-of-the-quiz-sheets" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-1-billeder-af-quiz-arkene" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-photos-of-the-quiz-sheets" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Jeg fotograferede mine quiz-ark fra meditationskurset og uploadede dem til Claude. Claude læste spørgsmålene, identificerede de rigtige svar og forstod strukturen med det samme.</p>
+<p>I photographed my quiz sheets from the meditation course and uploaded them to Claude. Claude read the questions, identified the correct answers and understood the structure straight away.</p>
 
-<h3 class="relative group">Trin 2: Første Version
-    <div id="trin-2-første-version" class="anchor"></div>
+<h3 class="relative group">Step 2: First Version
+    <div id="step-2-first-version" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-2-f%c3%b8rste-version" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-2-first-version" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Claude lavede en første version af quizzen som en simpel HTML side. Den virkede lokalt, men havde problemer med at loade filer korrekt via Live Server i VS Code.</p>
+<p>Claude built a first version of the quiz as a simple HTML page. It worked locally but had issues loading files correctly via Live Server in VS Code.</p>
 
-<h3 class="relative group">Trin 3: Migrering til React + Vite
-    <div id="trin-3-migrering-til-react--vite" class="anchor"></div>
+<h3 class="relative group">Step 3: Migrating to React + Vite
+    <div id="step-3-migrating-to-react--vite" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-3-migrering-til-react--vite" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-3-migrating-to-react--vite" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Vi besluttede at bygge det ordentligt med React og Vite - et moderne JavaScript framework og build tool. Claude genererede alle de nødvendige filer og satte projektet op fra bunden.</p>
+<p>We decided to build it properly with React and Vite - a modern JavaScript framework and build tool. Claude generated all the necessary files and set up the project from scratch.</p>
 
-<h3 class="relative group">Trin 4: Features
-    <div id="trin-4-features" class="anchor"></div>
+<h3 class="relative group">Step 4: Features
+    <div id="step-4-features" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-4-features" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-4-features" aria-label="Anchor">#</a>
     </span>
     
 </h3>
 <ul>
-<li>21 spørgsmål fordelt på 5 kategorier</li>
-<li>Øjeblikkelig feedback med jokes ved hvert svar</li>
-<li>Live score tracking og progress bar</li>
-<li>Animationer og moderne UI med gradient design</li>
-<li>Resultat side med personlig feedback</li>
+<li>21 questions across 5 categories</li>
+<li>Instant feedback with jokes for each answer</li>
+<li>Live score tracking and progress bar</li>
+<li>Animations and modern UI with gradient design</li>
+<li>Results page with personalised feedback</li>
 </ul>
 
-<h3 class="relative group">Trin 5: Deployment med GitHub Actions
-    <div id="trin-5-deployment-med-github-actions" class="anchor"></div>
+<h3 class="relative group">Step 5: Deployment with GitHub Actions
+    <div id="step-5-deployment-with-github-actions" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-5-deployment-med-github-actions" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-5-deployment-with-github-actions" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Vi satte GitHub Actions op til at bygge og deploye projektet automatisk til GitHub Pages hver gang der pushes ny kode til GitHub. Det betyder at jeg aldrig selv behøver at tænke på deployment - det sker helt automatisk.</p>
+<p>We set up GitHub Actions to automatically build and deploy the project to GitHub Pages every time new code is pushed to GitHub. That means I never have to think about deployment - it happens completely automatically.</p>
 
-<h3 class="relative group">Trin 6: Live! 🎉
-    <div id="trin-6-live-" class="anchor"></div>
+<h3 class="relative group">Step 6: Live! 🎉
+    <div id="step-6-live-" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trin-6-live-" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-6-live-" aria-label="Anchor">#</a>
     </span>
     
 </h3>
-<p>Efter alle fixes var quizzen live på GitHub Pages - gratis hostet og tilgængelig for alle.</p>
+<p>After all the fixes the quiz was live on GitHub Pages - hosted for free and accessible to everyone.</p>
 <hr>
 
-<h2 class="relative group">🔧 Ting Der Skulle Fixes
-    <div id="-ting-der-skulle-fixes" class="anchor"></div>
+<h2 class="relative group">🔧 Things That Needed Fixing
+    <div id="-things-that-needed-fixing" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-ting-der-skulle-fixes" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-things-that-needed-fixing" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Ingen projekter går helt gnidningsfrit - og det gjorde dette heller ikke. Her er de problemer vi stødte på undervejs:</p>
-<p><strong>Den hvide side</strong> var den største udfordring. Efter deployment viste siden ingenting - bare hvid. Det viste sig at være tre separate problemer der alle skulle fixes:</p>
-<p>Først lå deployment-filen det forkerte sted. Den skulle ligge i en specifik mappe for at GitHub Actions kunne finde den - det havde vi overset fra starten.</p>
-<p>Derefter var der et problem med base-stien i konfigurationen. GitHub Pages kræver at man specificerer præcis hvilken sti hjemmesiden ligger på - og det skal matche repo-navnet på GitHub helt nøjagtigt, inklusiv store og små bogstaver.</p>
-<p>Til sidst var der et problem med hvordan CSS-frameworket Tailwind blev loadet. Vi brugte en hurtig CDN-løsning som virker lokalt, men ikke i et rigtigt production build. Vi måtte installere Tailwind korrekt som en del af projektet i stedet.</p>
-<p><strong>Permissions-fejl</strong> i GitHub Actions betød at robotten ikke havde rettigheder til at skrive til vores repo. Det blev løst ved at slå &ldquo;Read and write permissions&rdquo; til i GitHub indstillingerne.</p>
-<p>Alt i alt var det gode læringspunkter - og den slags fejl man kun laver én gang. 😄</p>
+<p>No project goes completely smoothly - and this one was no exception. Here are the problems we ran into along the way:</p>
+<p><strong>The white page</strong> was the biggest challenge. After deployment the page showed nothing - just white. It turned out to be three separate problems that all needed fixing.</p>
+<p>First, the deployment file was in the wrong place. It needed to be in a specific folder for GitHub Actions to find it - something we had overlooked from the start.</p>
+<p>Then there was a problem with the base path in the configuration. GitHub Pages requires you to specify exactly which path the website lives at - and it has to match the repo name on GitHub exactly, including uppercase and lowercase letters.</p>
+<p>Finally there was a problem with how the CSS framework Tailwind was being loaded. We used a quick CDN solution that works locally but not in a proper production build. We had to install Tailwind correctly as part of the project instead.</p>
+<p><strong>Permissions errors</strong> in GitHub Actions meant the bot didn&rsquo;t have the rights to write to our repo. This was fixed by enabling &ldquo;Read and write permissions&rdquo; in the GitHub settings.</p>
+<p>All in all these were good learning points - and the kind of mistakes you only make once. 😄</p>
 <hr>
 
-<h2 class="relative group">😄 Min Yndlings Feature: Jokes ved Hvert Svar
-    <div id="-min-yndlings-feature-jokes-ved-hvert-svar" class="anchor"></div>
+<h2 class="relative group">😄 My Favourite Feature: Jokes With Every Answer
+    <div id="-my-favourite-feature-jokes-with-every-answer" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-min-yndlings-feature-jokes-ved-hvert-svar" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-my-favourite-feature-jokes-with-every-answer" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Det sjoveste ved projektet er feedback-systemet. For hvert spørgsmål får du en joke der forklarer hvorfor dit svar er rigtigt eller forkert. For eksempel:</p>
-<blockquote><p><strong>Spørgsmål:</strong> Målet med meditation er at være helt tom for tanker</p>
-<p><strong>Forkert svar:</strong> <em>&ldquo;Næh! Vores hjerner er som tænkemaskiner - det er deres job at tænke. Opgaven er at være stille omkring tankerne, ikke at få dem til at forsvinde. 🧠&rdquo;</em></p>
-</blockquote><blockquote><p><strong>Spørgsmål:</strong> Man kan kun meditere rigtigt hvis man sidder i lotusstilling</p>
-<p><strong>Forkert svar:</strong> <em>&ldquo;Ah nej! Du kan være indvendigt stille overalt - selv mens du gør opvask! (Selvom det ville være ualmindeligt roligt derhjemme) 🧖‍♀️&rdquo;</em></p>
+<p>The most fun part of the project is the feedback system. For every question you get a joke explaining why your answer is right or wrong. For example:</p>
+<blockquote><p><strong>Question:</strong> The goal of meditation is to be completely empty of thoughts</p>
+<p><strong>Wrong answer:</strong> <em>&ldquo;Nope! Our brains are like thinking machines - that&rsquo;s their job. The task is to be still around the thoughts, not to make them disappear. 🧠&rdquo;</em></p>
+</blockquote><blockquote><p><strong>Question:</strong> You can only meditate properly if you sit in the lotus position</p>
+<p><strong>Wrong answer:</strong> <em>&ldquo;Oh no! You can be inwardly still anywhere - even while doing the dishes! (Although that would make for an unusually peaceful kitchen) 🧖‍♀️&rdquo;</em></p>
 </blockquote><hr>
 
-<h2 class="relative group">🎓 Hvad Jeg Lærte
-    <div id="-hvad-jeg-lærte" class="anchor"></div>
+<h2 class="relative group">🎓 What I Learned
+    <div id="-what-i-learned" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-hvad-jeg-l%c3%a6rte" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-what-i-learned" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p><strong>Om meditation:</strong> Det handler ikke om at fjerne tanker. Det handler om at ændre din relation til dem. Du kan have en hel festival af tanker i hovedet og stadig være fuldkommen stille - fordi stilhed er en indre position, ikke en ydre tilstand.</p>
-<p><strong>Om vibe coding:</strong> AI er et fantastisk værktøj, men det er ikke magisk. Du skal stadig forstå hvad du vil have, kommunikere tydeligt og debugge når ting går galt. Den hvide side lærte mig mere om deployment end mange timers tutorial nogensinde ville have gjort.</p>
-<p><strong>Om at bygge projekter:</strong> Idéen er det sværeste. Når du har den, er vejen fra idé til færdigt produkt kortere end nogensinde takket være AI.</p>
+<p><strong>About meditation:</strong> It&rsquo;s not about removing thoughts. It&rsquo;s about changing your relationship to them. You can have a whole festival of thoughts in your head and still be completely still - because stillness is an inner position, not an outer state.</p>
+<p><strong>About vibe coding:</strong> AI is a fantastic tool, but it&rsquo;s not magic. You still need to understand what you want, communicate clearly and debug when things go wrong. The white page taught me more about deployment than hours of tutorials ever would have.</p>
+<p><strong>About building projects:</strong> The idea is the hardest part. Once you have it, the path from idea to finished product is shorter than ever thanks to AI.</p>
 <hr>
 
-<h2 class="relative group">🚀 Prøv Det Selv
-    <div id="-prøv-det-selv" class="anchor"></div>
+<h2 class="relative group">❌ Ai mistakes
+    <div id="-ai-mistakes" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-pr%c3%b8v-det-selv" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-ai-mistakes" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Quizzen er live og gratis at bruge:
+<p>Ai is not perfect and as you can see in this project it&rsquo;s not the perfect danish language it is translated to.
+Perhaps it could be my prompts that could have made it better.
+It&rsquo;s important to see that you can&rsquo;t 100% trust ai but its still a powerful tool to code with but you gotta have some thoughts about what you prompt it with.
+I startet this project with 2 lines of prompt to see what would happen. It was awful.. it looked like someone playing with html for the first time, but after a more narrow prompt with much more details about what you want it gives you alot more.</p>
+<hr>
+
+<h2 class="relative group">🚀 Try It Yourself
+    <div id="-try-it-yourself" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#-try-it-yourself" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The quiz is live and free to use:
 👉 <strong><a href="https://fredebas.github.io/Meditation-Quiz/"  target="_blank" rel="noreferrer">https://fredebas.github.io/Meditation-Quiz/</a></strong></p>
 <hr>
 
-<h2 class="relative group">En Tak til Claude 🤖
-    <div id="en-tak-til-claude-" class="anchor"></div>
+<h2 class="relative group">A Thank You to Claude 🤖
+    <div id="a-thank-you-to-claude-" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#en-tak-til-claude-" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-thank-you-to-claude-" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Dette projekt ville ikke eksistere uden Claude. Ikke fordi jeg ikke kan kode - men fordi vibe coding med AI gør det muligt at gå fra idé til færdigt produkt på en brøkdel af den tid det normalt ville tage.</p>
-<p>Det handler ikke om at AI erstatter udviklere. Det handler om at AI giver dig superkræfter til at bygge ting hurtigere, lære undervejs og fokusere på idéen frem for syntaksen.</p>
-<blockquote><p><em>&ldquo;Vibe coding er ikke fremtiden - det er nutiden.&rdquo;</em></p>
+<p>This project wouldn&rsquo;t exist without Claude. Not because I can&rsquo;t code - but because vibe coding with AI makes it possible to go from idea to finished product in a fraction of the time it would normally take.</p>
+<p>It&rsquo;s not about AI replacing developers. It&rsquo;s about AI giving you superpowers to build things faster, learn along the way and focus on the idea rather than the syntax.</p>
+<blockquote><p><em>&ldquo;Vibe coding isn&rsquo;t the future - it&rsquo;s the present.&rdquo;</em></p>
 </blockquote>
           
           
@@ -872,21 +879,21 @@
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
+        </span>
+        <span class="flex flex-col items-end">
+          
             <a
-              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/blog/rag/">
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/first_day/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Rag Chatbot
+                First day on ai&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
-              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-04-17T00:00:00&#43;00:00">17 April 2026</time>
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-04-10T00:00:00&#43;00:00">10 April 2026</time>
               </span>
             
-          
-        </span>
-        <span class="flex flex-col items-end">
           
         </span>
       </div>
@@ -898,7 +905,7 @@
     </footer>
   </article>
 
-        
+          
 
 
   
@@ -920,7 +927,7 @@
   </a>
 </div>
 
-      </main><footer id="site-footer" class="py-10 print:hidden">
+        </main><footer id="site-footer" class="py-10 print:hidden">
   
   
     
@@ -994,24 +1001,53 @@
   </div>
 </div>
 
+      </div>
     </div>
+
+    
+    <script>
+      (function() {
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        const chars = '01アイウエオカキクケコサシスセタチツテトナニヌネノ{}[]<>|/\\*&#@!';
+        let drops = [];
+        const fontSize = 13;
+
+        function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          const cols = Math.floor(canvas.width / fontSize);
+          drops = Array.from({ length: cols }, () => Math.random() * -100);
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(6, 10, 15, 0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#00ff41';
+          ctx.font = fontSize + 'px monospace';
+          for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillStyle = Math.random() > 0.95 ? '#ffffff' : '#00ff41';
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+            drops[i]++;
+          }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 50);
+      })();
+    </script>
+
     <script>
      window.difyChatbotConfig = {
       token: 'LCEv1QhQeLDNlf3h',
-      inputs: {
-        
-        
-        
-        
-      },
-      systemVariables: {
-        
-        
-      },
-      userVariables: {
-        
-        
-      },
+      inputs: {},
+      systemVariables: {},
+      userVariables: {},
      }
     </script>
     <script

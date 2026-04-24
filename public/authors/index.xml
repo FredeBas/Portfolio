@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Portfolie</title>
+    <title>Authors on Portfolio</title>
     <link>http://localhost:1313/authors/</link>
-    <description>Recent content in Authors on Portfolie</description>
+    <description>Recent content in Authors on Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>Bastiansen44@gmail.com (Frederik Bastiansen)</managingEditor>

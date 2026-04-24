@@ -3,8 +3,8 @@
   lang="en"
   dir="ltr"
   class="scroll-smooth"
-  data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en-us">
@@ -15,8 +15,8 @@
 
   
   
-    <title>peli &middot; Portfolie</title>
-    <meta name="title" content="peli &middot; Portfolie">
+    <title>peli &middot; Portfolio</title>
+    <meta name="title" content="peli &middot; Portfolio">
   
 
   
@@ -43,7 +43,7 @@
 
   
   <meta property="og:url" content="http://localhost:1313/projects/peli/">
-  <meta property="og:site_name" content="Portfolie">
+  <meta property="og:site_name" content="Portfolio">
   <meta property="og:title" content="peli">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -91,6 +91,8 @@
   
   
   
+    
+  
   
     
   
@@ -98,8 +100,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.dc8fe411dbbe7939b35fad848218bcb8e0a84ed68becff9a3964e78318b639245b2cd72cd7dc316ad515d8cbf09ad89baf3e965a447db6824deb995f9d955fb2.css"
-    integrity="sha512-3I/kEdu&#43;eTmzX62Eghi8uOCoTtaL7P&#43;aOWTngxi2OSRbLNcs19wxatUV2Mvwmtibrz6WWkR9toJN65lfnZVfsg==">
+    href="/css/main.bundle.min.53bfea1a198a5440957c3e38b76264dc300d9f088d9cb10cd385317ec03da0dbc488b805e7ad976a27d8ba02ca6f8f7ca44b675bbb0b9452505c2cb36882ad5a.css"
+    integrity="sha512-U7/qGhmKVECVfD44t2Jk3DANnwiNnLEM04UxfsA9oNvEiLgF562XaifYugLKb498pEtnW7sLlFJQXCyzaIKtWg==">
 
   
   
@@ -222,7 +224,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "6"
   }]
   </script>
 
@@ -260,7 +262,11 @@
 
   
   <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
-    <div id="the-top" class="absolute flex self-center">
+
+    
+    <canvas id="matrix-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.18;"></canvas>
+
+    <div id="the-top" class="absolute flex self-center" style="position:relative;z-index:10;">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content">
@@ -268,13 +274,15 @@
         Skip to main content
       </a>
     </div>
-    
-    
-      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+
+    <div style="position:relative;z-index:10;flex:1;display:flex;flex-direction:column;">
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
   
   
     <a href="/" class="text-base font-medium truncate min-w-0 shrink">
-      Portfolie
+      Portfolio
     </a>
   
   <div class="flex items-center ms-auto">
@@ -451,10 +459,10 @@
       
         <a
           href=""
-          aria-label="An interesting topic"
+          
           class="inline-flex items-center gap-2 px-2 py-2 bf-icon-color-hover rounded-full text-sm">
           
-          <span title="">An interesting topic</span>
+          <span title=""></span>
         </a>
       
     </div>
@@ -489,7 +497,7 @@
           class="flex items-center bf-icon-color-hover">
           
           <span class="text-xs font-light" title="">
-            An interesting topic
+            
           </span>
         </a>
       
@@ -499,10 +507,10 @@
 
 
 
-    
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
-        
+      
+      <div class="relative flex flex-col grow">
+        <main id="main-content" class="grow">
+          
   
   <article>
     
@@ -543,7 +551,11 @@
   
 
   
+    
+  
 
+  
+    
   
 
   
@@ -560,7 +572,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-12T00:00:00&#43;00:00">12 April 2026</time>
+      <time datetime="2026-04-12T00:00:00&#43;00:00">12 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -654,7 +666,8 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          
+          <p>Beskrivelse af peli projektet kommer her.</p>
+
           
           
           
@@ -679,7 +692,7 @@
     </footer>
   </article>
 
-        
+          
 
 
   
@@ -701,7 +714,7 @@
   </a>
 </div>
 
-      </main><footer id="site-footer" class="py-10 print:hidden">
+        </main><footer id="site-footer" class="py-10 print:hidden">
   
   
     
@@ -775,24 +788,53 @@
   </div>
 </div>
 
+      </div>
     </div>
+
+    
+    <script>
+      (function() {
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        const chars = '01アイウエオカキクケコサシスセタチツテトナニヌネノ{}[]<>|/\\*&#@!';
+        let drops = [];
+        const fontSize = 13;
+
+        function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          const cols = Math.floor(canvas.width / fontSize);
+          drops = Array.from({ length: cols }, () => Math.random() * -100);
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(6, 10, 15, 0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#00ff41';
+          ctx.font = fontSize + 'px monospace';
+          for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillStyle = Math.random() > 0.95 ? '#ffffff' : '#00ff41';
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+            drops[i]++;
+          }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 50);
+      })();
+    </script>
+
     <script>
      window.difyChatbotConfig = {
       token: 'LCEv1QhQeLDNlf3h',
-      inputs: {
-        
-        
-        
-        
-      },
-      systemVariables: {
-        
-        
-      },
-      userVariables: {
-        
-        
-      },
+      inputs: {},
+      systemVariables: {},
+      userVariables: {},
      }
     </script>
     <script

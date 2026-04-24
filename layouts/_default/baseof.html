@@ -11,7 +11,11 @@
   {{ $bodyLayout := "flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32" }}
   {{ $bodyColor := "text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral" }}
   <body class="{{ $bodyLayout }} {{ $bodyColor }} {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
-    <div id="the-top" class="absolute flex self-center">
+
+    <!-- Matrix rain canvas -->
+    <canvas id="matrix-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0.18;"></canvas>
+
+    <div id="the-top" class="absolute flex self-center" style="position:relative;z-index:10;">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content">
@@ -19,41 +23,72 @@
         {{ i18n "nav.skip_to_main" }}
       </a>
     </div>
-    {{ $header := print "header/" site.Params.header.layout ".html" }}
-    {{ if templates.Exists ( printf "partials/%s" $header ) }}
-      {{ partial $header . }}
-    {{ else }}
-      {{ partial "header/basic.html" . }}
-    {{ end }}
-    <div class="relative flex flex-col grow">
-      <main id="main-content" class="grow">
-        {{ block "main" . }}{{ end }}
-        {{ if and (site.Params.footer.showScrollToTop | default true) }}
-          {{- partial "scroll-to-top.html" . -}}
-        {{ end }}
-      </main>
-      {{- partial "footer.html" . -}}
-      {{ if site.Params.enableSearch | default false }}
-        {{- partial "search.html" . -}}
+
+    <div style="position:relative;z-index:10;flex:1;display:flex;flex-direction:column;">
+      {{ $header := print "header/" site.Params.header.layout ".html" }}
+      {{ if templates.Exists ( printf "partials/%s" $header ) }}
+        {{ partial $header . }}
+      {{ else }}
+        {{ partial "header/basic.html" . }}
       {{ end }}
+      <div class="relative flex flex-col grow">
+        <main id="main-content" class="grow">
+          {{ block "main" . }}{{ end }}
+          {{ if and (site.Params.footer.showScrollToTop | default true) }}
+            {{- partial "scroll-to-top.html" . -}}
+          {{ end }}
+        </main>
+        {{- partial "footer.html" . -}}
+        {{ if site.Params.enableSearch | default false }}
+          {{- partial "search.html" . -}}
+        {{ end }}
+      </div>
     </div>
+
+    <!-- Matrix rain script -->
+    <script>
+      (function() {
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+        const chars = '01アイウエオカキクケコサシスセタチツテトナニヌネノ{}[]<>|/\\*&#@!';
+        let drops = [];
+        const fontSize = 13;
+
+        function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+          const cols = Math.floor(canvas.width / fontSize);
+          drops = Array.from({ length: cols }, () => Math.random() * -100);
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(6, 10, 15, 0.05)';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = '#00ff41';
+          ctx.font = fontSize + 'px monospace';
+          for (let i = 0; i < drops.length; i++) {
+            const char = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillStyle = Math.random() > 0.95 ? '#ffffff' : '#00ff41';
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+              drops[i] = 0;
+            }
+            drops[i]++;
+          }
+        }
+
+        resize();
+        window.addEventListener('resize', resize);
+        setInterval(draw, 50);
+      })();
+    </script>
+
     <script>
      window.difyChatbotConfig = {
       token: 'LCEv1QhQeLDNlf3h',
-      inputs: {
-        // You can define the inputs from the Start node here
-        // key is the variable name
-        // e.g.
-        // name: "NAME"
-      },
-      systemVariables: {
-        // user_id: 'YOU CAN DEFINE USER ID HERE',
-        // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
-      },
-      userVariables: {
-        // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
-        // name: 'YOU CAN DEFINE USER NAME HERE',
-      },
+      inputs: {},
+      systemVariables: {},
+      userVariables: {},
      }
     </script>
     <script
