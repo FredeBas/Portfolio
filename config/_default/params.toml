@@ -10,6 +10,7 @@ defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
 
 customCSS = ["css/custom.css"]
+customJS= ["js/custom.js"]
 
 enableA11y = false
 enableSearch = true
