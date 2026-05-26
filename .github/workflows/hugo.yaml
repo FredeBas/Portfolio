@@ -131,6 +131,8 @@ jobs:
               --header "Authorization: Bearer ${DIFY_API_KEY}" \
               --form "file=@${file};filename=${doc_name}.md;type=text/plain;charset=utf-8" \
               --form 'data={"indexing_technique":"high_quality","doc_form":"text_model","process_rule":{"mode":"automatic"}}'
+
+            sleep 1
           done
       - name: Cache restore
         id: cache-restore
