@@ -125,14 +125,25 @@ jobs:
 
             echo "Uploading ${file} as ${doc_name}"
 
-            curl --silent --show-error --fail \
-              --request POST \
-              --url "${DIFY_BASE_URL}/v1/datasets/${DIFY_DATASET_ID}/document/create-by-file" \
-              --header "Authorization: Bearer ${DIFY_API_KEY}" \
-              --form "file=@${file};filename=${doc_name}.md;type=text/plain;charset=utf-8" \
-              --form 'data={"indexing_technique":"high_quality","doc_form":"text_model","process_rule":{"mode":"automatic"}}'
+            # Retry up to 3 times with exponential backoff
+            for attempt in 1 2 3; do
+              if curl --silent --show-error --fail \
+                --request POST \
+                --url "${DIFY_BASE_URL}/v1/datasets/${DIFY_DATASET_ID}/document/create-by-file" \
+                --header "Authorization: Bearer ${DIFY_API_KEY}" \
+                --form "file=@${file};filename=${doc_name}.md;type=text/plain;charset=utf-8" \
+                --form 'data={"indexing_technique":"high_quality","doc_form":"text_model","process_rule":{"mode":"automatic"}}'; then
+                break
+              else
+                if [ $attempt -lt 3 ]; then
+                  wait_time=$((attempt * 3))
+                  echo "Upload failed, retrying in ${wait_time}s (attempt $((attempt + 1))/3)"
+                  sleep $wait_time
+                fi
+              fi
+            done
 
-            sleep 2
+            sleep 3
           done
       - name: Cache restore
         id: cache-restore
