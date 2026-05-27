@@ -59,22 +59,22 @@ Det er bevidst at jeg har valgt at stoppe der. Jeg kunne have bygget mere før w
  Vi har stilt dem nogle spørgsmål som vi håber at få svar på for at kunne videreudvikle produktet.
 
  Vi kunne godt bruge nogle skabeloner for de forskellige steps, såsom:
-	Tilbuddet
-	e-conomics liste af "produkter" i et tilbud
-	Trello skabelonen ("bryllupsboard) og eksempel på kontrakt
-	Eventuelt også en tillægskontrakt	
-	En tidslinje over de forskellige oplysninger og kontakt, f.eks. 
-	9 måneder inden: første kontakt med par og angivelse af tilbud 
-	uge efter dette: kontrakt underskrevet samme dag, 
-	Trello oprettes og depositum betaling modtages 
-	5 måneder inden: flere oplysninger modtages 
-	1 måned inden: endelig optælling af gæster? 
-	1 uge inden: bordplan 	
-    Kan vi få en oversigt af anvendte farvekoder i Trello.	
-	Hvordan tager bryllupper prioritet over sommerhuse — hvad er præcedensen? 
-    Altså kan man booke sommerhuse selvom der er bryllup fx?	
-	Hvad har kunder af muligheder for tilvalg i kontrakten? (blomster, mad m.m.). Nok det samme som e-conomics listen i spm 1.2	
-	Hvad er normalt antal sovepladser for et bryllup?	
-	Hvilke data overføres fra Trello boardet til kontrakten?	
-	Har I en liste med ca. priser når kunder emailer deres spørgsmål til J om hvad noget vil koste? Med den kan vi laver nogle estimater. Måske igen samme som spm 1.2	
-	Kunne I tænke jer at systemet sender påmindelser til jer når der er deadlines som skal overholdes?	Dette har jeg så valgt og indføre.
+1. Tilbuddet
+2.	e-conomics liste af "produkter" i et tilbud
+3.	Trello skabelonen ("bryllupsboard) og eksempel på kontrakt
+4.	Eventuelt også en tillægskontrakt	
+5.	En tidslinje over de forskellige oplysninger og kontakt, f.eks. 
+6.	9 måneder inden: første kontakt med par og angivelse af tilbud 
+7.	uge efter dette: kontrakt underskrevet samme dag, 
+8.	Trello oprettes og depositum betaling modtages 
+9.	5 måneder inden: flere oplysninger modtages 
+10.	1 måned inden: endelig optælling af gæster? 
+11.	1 uge inden: bordplan 	
+12.    Kan vi få en oversigt af anvendte farvekoder i Trello.	
+13.	Hvordan tager bryllupper prioritet over sommerhuse — hvad er præcedensen? 
+14.    Altså kan man booke sommerhuse selvom der er bryllup fx?	
+15.	Hvad har kunder af muligheder for tilvalg i kontrakten? (blomster, mad m.m.). Nok det samme som e-conomics listen i spm 1.2	
+16.	Hvad er normalt antal sovepladser for et bryllup?	
+17.	Hvilke data overføres fra Trello boardet til kontrakten?	
+18.	Har I en liste med ca. priser når kunder emailer deres spørgsmål til J om hvad noget vil koste? Med den kan vi laver nogle   estimater. Måske igen samme som spm 1.2	
+19.	Kunne I tænke jer at systemet sender påmindelser til jer når der er deadlines som skal overholdes?	Dette har jeg så valgt og indføre.
