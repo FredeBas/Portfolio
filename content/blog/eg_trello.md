@@ -59,12 +59,13 @@ Kun bryllups-oprettelse i denne version. Ingen sommerhus-flow endnu. Ingen remin
  
 ## Kundespørgsmål
  
-- Kan vi få adgang til Johans nuværende Trello-template, så vi kan tilpasse standard-templaten 1:1 til deres faktiske workflow?
+- Kan vi få adgang til J's nuværende Trello-template, så vi kan tilpasse standard-templaten 1:1 til deres faktiske workflow?
 - Hvilken Trello-plan er de på? Skal være Standard eller højere for fuld API-adgang.
 - Hvor mange bryllupper opretter de typisk per måned i højsæsonen?
-- Skal B have præcis samme adgang som Johan, eller noget begrænset?
+- Skal B have præcis samme adgang som J, eller noget begrænset?
 - Er det OK at gæste-data (navne, datoer) sendes til Anthropic for AI-behandling? GDPR-mæssigt bør det nævnes.
 - Hvad er deres månedlige budget for hosting + drift + AI inkluderet i én pris?
+
 ## Antagelser
  
 - E.G standard bryllups-template er rimelig konsistent — vores 33-task template er udgangspunkt indtil vi får deres faktiske
@@ -73,8 +74,9 @@ Kun bryllups-oprettelse i denne version. Ingen sommerhus-flow endnu. Ingen remin
 - J og B er teknisk komfortable nok til at bruge en webapp med login
 - PostgreSQL via Docker lokalt under udvikling, managed PostgreSQL i produktion
 - Resten af medarbejderne bliver i Trello uændret — kun de to med skrive-adgang bruger webapp'en
+
 ## Næste tre opgaver
  
 1. Workshop med J og B: gennemgang af nuværende Trello-template og tilpasning af `template.js` til deres faktiske 60 tasks
 2. Demo MVP'en med ægte API-keys: oprette 3-5 test-bryllupper og verificere at boards ser fornuftige ud i Trello
-3. Pris- og budgetsamtale med Johan: præsentér én samlet månedspris (hosting + AI + drift) og få go-ahead til at flytte fra localhost til produktion
+3. Pris- og budgetsamtale med J: præsentér én samlet månedspris (hosting + AI + drift) og få go-ahead til at flytte fra localhost til produktion
