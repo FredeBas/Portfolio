@@ -19,7 +19,7 @@ Udelukkende J (medejer, primær Trello-bruger) og B (sekundær med skrive-rettig
  
 ## Nuværende proces
  
-Når en booking kommer ind, åbner Johan Trello, henter sin template, kopierer tasks ind manuelt, og sætter datoer på hver enkelt task baseret på bryllupsdatoen. Hvis vielsen sker i Maribo Domkirke med båd-transport via Anemonen, skal han huske at tilføje båd-relaterede tasks manuelt. Hvis det er et stort bryllup, skal han justere tasks omkring logistik. Det hele afhænger af hans hukommelse og tid.
+Når en booking kommer ind, åbner J Trello, henter sin template, kopierer tasks ind manuelt, og sætter datoer på hver enkelt task baseret på bryllupsdatoen. Hvis vielsen sker i Maribo Domkirke med båd-transport via Anemonen, skal han huske at tilføje båd-relaterede tasks manuelt. Hvis det er et stort bryllup, skal han justere tasks omkring logistik. Det hele afhænger af hans hukommelse og tid.
  
 ## Foreslået løsning
  
